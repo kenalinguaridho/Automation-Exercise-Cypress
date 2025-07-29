@@ -1,0 +1,23 @@
+{
+  "validUser": {
+    "name": "John Doe",
+    "firstname": "John",
+    "lastname": "Doe",
+    "email": "Test11210@mail.com",
+    "password": "test",
+    "birth_date": 12,
+    "birth_month": 11,
+    "birth_year": 2005,
+    "address1": "address1",
+    "address2": "address2",
+    "country": "test",
+    "state": "Test State",
+    "city": "Test City",
+    "zipcode": "zipcode",
+    "mobile_number": 212661278678
+  },
+  "invalidUser": {
+    "email": "invalidemail@mail.com",
+    "password": "invalidP@ssword"
+  }
+}

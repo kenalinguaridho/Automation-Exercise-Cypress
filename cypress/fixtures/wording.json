@@ -1,0 +1,88 @@
+{
+    "menuItems": [
+        "Home",
+        "Products",
+        "Cart",
+        "Signup / Login",
+        "Test Cases",
+        "API Testing",
+        "Video Tutorials",
+        "Contact us"
+    ],
+    "loginMenuItems": [
+        "Home",
+        "Products",
+        "Cart",
+        "Logout",
+        "Delete Account",
+        "Test Cases",
+        "API Testing",
+        "Video Tutorials",
+        "Contact us",
+        "Logged in as"
+    ],
+    "categories": [
+        "WOMEN",
+        "MEN",
+        "KIDS"
+    ],
+    "brands": [
+        "POLO",
+        "H&M",
+        "MADAME",
+        "MAST & HARBOUR",
+        "BABYHUG",
+        "ALLEN SOLLY JUNIOR",
+        "KOOKIE KIDS",
+        "BIBA"
+    ],
+    "account_created": [
+        "Account Created!",
+        "Congratulations! Your new account has been successfully created!",
+        "You can now take advantage of member privileges to enhance your online shopping experience with us."
+    ],
+    "account_deleted": [
+        "Account Deleted!",
+        "Your account has been permanently deleted!",
+        "You can create new account to take advantage of member privileges to enhance your online shopping experience with us."
+    ],
+    "contact_us_content": [
+        "Contact Us",
+        "Get In Touch",
+        "Feedback For Us"
+    ],
+    "contact_us_input": {
+        "name": "John Doe",
+        "email": "johndoe@mail.com",
+        "subject": "Keep upgrade yourself",
+        "message": "Test."
+    },
+    "test_cases_list": [
+        "1: Register User",
+        "2: Login User with correct email and password",
+        "3: Login User with incorrect email and password",
+        "4: Logout User",
+        "5: Register User with existing email",
+        "6: Contact Us Form",
+        "7: Verify Test Cases Page",
+        "8: Verify All Products and product detail page",
+        "9: Search Product",
+        "10: Verify Subscription in home page",
+        "11: Verify Subscription in Cart page",
+        "12: Add Products in Cart",
+        "13: Verify Product quantity in Cart",
+        "14: Place Order: Register while Checkout",
+        "15: Place Order: Register before Checkout",
+        "16: Place Order: Login before Checkout",
+        "17: Remove Products From Cart",
+        "18: View Category Products",
+        "19: View & Cart Brand Products",
+        "20: Search Products and Verify Cart After Login",
+        "21: Add review on product",
+        "22: Add to cart from Recommended items",
+        "23: Verify address details in checkout page",
+        "24: Download Invoice after purchase order",
+        "25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality",
+        "26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality"
+    ]
+}
