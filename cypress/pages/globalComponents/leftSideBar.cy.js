@@ -1,3 +1,5 @@
+import Wording from '../../fixtures/wording.json'
+
 class LeftSideBar {
     getSideBar() {
         return cy.get('.left-sidebar')
@@ -8,7 +10,11 @@ class LeftSideBar {
     }
 
     verifyCategoryList() {
-        // This will be developed soon for verify UI components
+        return this.getSideBar().get('#accordian').within(() => {
+            Wording.categories.forEach(category => {
+                cy.contains(category, { matchCase: false }).should('exist')
+            })
+        })
     }
 
     verifyBrandsExist() {
@@ -16,7 +22,11 @@ class LeftSideBar {
     }
 
     verifyBrandsList() {
-        // This will be developed soon for verify UI components
+        return this.getSideBar().get('.brands-name').within(() => {
+            Wording.brands.forEach(brand => {
+                cy.contains(brand, { matchCase: false }).should('exist')
+            })
+        })
     }
 
 
