@@ -5,5 +5,5 @@ Cypress.Commands.add('VerifyTestCasesPageVisibility', ()=> {
     URLVisited.getURL('/test_cases')
     TestCases.getHeader()
     TestCases.getListTestCases()
-
+    TestCases.testCasesClick(1)
 })
