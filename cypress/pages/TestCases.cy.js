@@ -16,6 +16,18 @@ class TestCases {
         })
     }
 
+    testCasesClick(option) {
+        const list = cy.get('section[id=form]').get('h4[class=panel-title] > a > u')
+
+        if (option === 'first' || option === 'last') {
+            list[option]().click()  
+        } else if (typeof option === 'number') {
+            list.eq(option-1).click()
+        } else {
+            throw new Error('Invalid option for button selection')
+        }
+    }
+
 }
 
 export default new TestCases()
