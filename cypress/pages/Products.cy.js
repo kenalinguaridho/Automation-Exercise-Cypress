@@ -7,12 +7,20 @@ class Products {
         return cy.visit('/products')
     }
 
-    verifyProductsPage() {
-        return cy.get('.features_items').contains('All Products').should('exist')
+    getProductSection() {
+        return cy.get('.features_items')
     }
 
-    verifyProductList() {
-        return cy.get('.product-image-wrapper > .single-products > .productinfo').should('exist').and('have.length.greaterThan', 0)
+    verifyProductsPage() {
+        return this.getProductSection().contains('All Products').should('exist')
+    }
+
+    verifySearchProductsPage() {
+        return this.getProductSection().contains('Searched Products').should('exist')
+    }
+
+    getProductList() {
+        return cy.get('.product-image-wrapper > .single-products > .productinfo')
     }
 
     getProductInformation() {
@@ -25,9 +33,22 @@ class Products {
             url: "https://automationexercise.com/api/productsList"
         }).then((response) => {
             expect(response.status).to.eq(200);
-            // cy.log("BODY TYPE => " + typeof response.body);
             return response.body;
         });
+    }
+
+    fetchSearchedProduct(keyword) {
+        return cy.request({
+            method: "POST",
+            url: "https://automationexercise.com/api/searchProduct",
+            form: true,
+            body: {
+                search_product: keyword
+            }
+        }).then((response) => {
+            console.log("Response => ", response)
+            return response.body
+        })
     }
 
     verifyProductDetails(id) {
@@ -46,7 +67,28 @@ class Products {
         });
     }
 
+    getInputSearch() {
+        return cy.get('input[id="search_product"]')
+    }
 
+    getSearchedSelector() {
+        return this.cy.get()
+    }
+
+    inputSearchProduct(name) {
+        return this.getInputSearch().type(name)
+    }
+
+    verifySearchedProducts(keyword) {
+        return this.fetchSearchedProduct(keyword).then((responseBody) => {
+            const body = safeParse(responseBody)
+            console.log(typeof body.products)
+            console.log(body.products[0])
+            body.products.forEach(product => {
+                this.getProductList().contains(product.name).should('exist')
+            })
+        })
+    }
 
 }
 
