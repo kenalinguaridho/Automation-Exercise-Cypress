@@ -9,14 +9,20 @@ describe('Products Feature', () => {
         cy.viewport(1280, 720)
         cy.HomePageVisibility()
         cy.ClickNavbarMenu('Products')
-        
+        cy.VerifyAllProductsVisibility()
     })
 
-    it('TC-008-Verify All Products and product detail page', async () => {
+    it('TC-008-Verify All Products and product detail page', () => {
         const id = 1
-        cy.VerifyAllProductsVisibility()
         cy.ClickViewProduct(id)
         cy.VerifyURL(`/product_details/${id}`)
         cy.VerifyProductDetails(id)
+    })
+
+    it('TC-009-Search Product', () => {
+        const product = 'Top'
+        cy.TypeInputSearch(product)
+        cy.ClickSearchButton()
+        cy.VerifySearchedProducts(product)
     })
 })
