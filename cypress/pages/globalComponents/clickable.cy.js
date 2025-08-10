@@ -20,4 +20,8 @@ export default class Clickable {
         cy.get(this.selector).contains(text).click()
     }
 
+    clickButton() {
+        cy.get(this.selector).click()
+    }
+
 }
