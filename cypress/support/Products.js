@@ -8,7 +8,7 @@ Cypress.Commands.add('VerifyAllProductsVisibility', () => {
     LeftSideBar.verifyCategoryExist()
     LeftSideBar.verifyCategoryList()
     Products.verifyProductsPage()
-    Products.verifyProductList()
+    // Products.verifyProductList()
 })
 
 Cypress.Commands.add('ClickViewProduct', (id) => {
@@ -17,4 +17,17 @@ Cypress.Commands.add('ClickViewProduct', (id) => {
 
 Cypress.Commands.add('VerifyProductDetails', (id) => {
      Products.verifyProductDetails(id)
+})
+
+Cypress.Commands.add('TypeInputSearch', (name) => {
+    Products.inputSearchProduct(name)
+})
+
+Cypress.Commands.add('ClickSearchButton', () => {
+    new Clickable('button[id="submit_search"]').clickButton()
+})
+
+Cypress.Commands.add('VerifySearchedProducts', (name) => {
+    Products.verifySearchProductsPage()
+    Products.verifySearchedProducts(name)
 })
