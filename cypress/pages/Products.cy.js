@@ -90,6 +90,10 @@ class Products {
         })
     }
 
+    continueShopping() {
+        return this.getProductSection().get('.modal-footer > button').click()
+    }
+
 }
 
 export default new Products()
