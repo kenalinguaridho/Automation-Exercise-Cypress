@@ -8,9 +8,9 @@ export default class Clickable {
         const list = cy.get(this.selector)
 
         if (option === 'first' || option === 'last') {
-            list[option]().click()  
+            list[option]().click({force : true})  
         } else if (typeof option === 'number') {
-            list.eq(option-1).click()
+            list.eq(option-1).click({force: true})
         } else {
             throw new Error('Invalid option for button selection')
         }
