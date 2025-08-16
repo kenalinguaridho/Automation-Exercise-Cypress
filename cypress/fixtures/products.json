@@ -1,0 +1,19 @@
+{
+    "products-tc-012": [
+        {
+            "name": "Blue Top",
+            "price": 500,
+            "quantity": 1
+        },
+        {
+            "name": "Winter Top",
+            "price": 600,
+            "quantity": 1
+        }
+    ],
+    "product-tc-013": {
+        "name": "Blue Top",
+        "price": 500,
+        "quantity":5
+    }
+}
